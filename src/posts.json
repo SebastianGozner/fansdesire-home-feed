@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "mainImage": "/1.webp",
+    "avatar": "avatar.jpg",
+    "username": "Priya Patel",
+    "description": "Exploring the beautiful nature!",
+    "date": "2023-02-21"
+  },
+  {
+    "id": 2,
+    "mainImage": "/2.webp",
+    "avatar": "avatar.jpg",
+    "username": "Priya Patel",
+    "description": "Urban adventures and cityscapes.",
+    "date": "2023-02-20"
+  },
+  {
+    "id": 3,
+    "mainImage": "/3.webp",
+    "avatar": "avatar.jpg",
+    "username": "Priya Patel",
+    "description": "Catching sunsets and good vibes.",
+    "date": "2023-02-19"
+  },
+  {
+    "id": 4,
+    "mainImage": "/4.webp",
+    "avatar": "avatar.jpg",
+    "username": "Priya Patel",
+    "description": "Life is a beautiful ride.",
+    "date": "2023-02-18"
+  },
+  {
+    "id": 5,
+    "mainImage": "/5.webp",
+    "avatar": "avatar.jpg",
+    "username": "Priya Patel",
+    "description": "Adventure awaits around every corner.",
+    "date": "2023-02-17"
+  },
+  {
+    "id": 6,
+    "mainImage": "/6.webp",
+    "avatar": "avatar.jpg",
+    "username": "Priya Patel",
+    "description": "Chasing dreams in the city.",
+    "date": "2023-02-16"
+  },
+  {
+    "id": 7,
+    "mainImage": "/7.webp",
+    "avatar": "avatar.jpg",
+    "username": "Priya Patel",
+    "description": "Serene moments in nature.",
+    "date": "2023-02-15"
+  },
+  {
+    "id": 8,
+    "mainImage": "/8.webp",
+    "avatar": "avatar.jpg",
+    "username": "Priya Patel",
+    "description": "Capturing the essence of urban life.",
+    "date": "2023-02-14"
+  },
+  {
+    "id": 9,
+    "mainImage": "/9.webp",
+    "avatar": "avatar.jpg",
+    "username": "Priya Patel",
+    "description": "Moments that take your breath away.",
+    "date": "2023-02-13"
+  }
+]
