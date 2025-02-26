@@ -1,74 +1,65 @@
 // src/Feed.js
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useEffect } from 'react';
 import postsData from './posts.json';
 import Post from './Post';
+import CommentsDrawer from './CommentsDrawer';
 
 const Feed = () => {
-    const [index, setIndex] = useState(0);
-    const [direction, setDirection] = useState(0);
+    // Track whether the comments drawer is open, etc.
+    const [commentsDrawerOpen, setCommentsDrawerOpen] = React.useState(false);
+    const [selectedPost, setSelectedPost] = React.useState(null);
 
-    // Called when a swipe gesture is detected
-    const paginate = (newDirection) => {
-        setDirection(newDirection);
-        setIndex((prevIndex) => {
-            let newIndex = prevIndex + newDirection;
-            if (newIndex < 0) newIndex = postsData.length - 1;
-            if (newIndex >= postsData.length) newIndex = 0;
-            return newIndex;
-        });
+    // 1) Define a function to set the custom --vh variable
+    const setViewportHeight = () => {
+        // window.innerHeight is the *actual* height of the visible area in px
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
     };
 
-    // Variants for entering, centered, and exiting posts.
-    const variants = {
-        enter: (direction) => ({
-            y: direction > 0 ? 1000 : -1000,
-            opacity: 0,
-        }),
-        center: {
-            zIndex: 1,
-            y: 0,
-            opacity: 1,
-        },
-        exit: (direction) => ({
-            zIndex: 0,
-            y: direction > 0 ? -1000 : 1000,
-            opacity: 0,
-        }),
+    // 2) On component mount, and whenever the window resizes, update --vh
+    useEffect(() => {
+        setViewportHeight();
+        window.addEventListener('resize', setViewportHeight);
+        return () => {
+            window.removeEventListener('resize', setViewportHeight);
+        };
+    }, []);
+
+    // Handle comment icon clicks
+    const handleCommentClick = (post) => {
+        setSelectedPost(post);
+        setCommentsDrawerOpen(true);
     };
 
-    // Threshold for triggering a swipe (in pixels)
-    const dragThreshold = 100;
+    const handleCloseDrawer = () => {
+        setCommentsDrawerOpen(false);
+    };
 
     return (
-        <div className="relative h-screen overflow-hidden">
-            <AnimatePresence initial={false} custom={direction}>
-                <motion.div
-                    key={postsData[index].id}
-                    custom={direction}
-                    variants={variants}
-                    initial="enter"
-                    animate="center"
-                    exit="exit"
-                    transition={{
-                        y: { type: 'spring', stiffness: 300, damping: 30 },
-                        opacity: { duration: 0.2 },
-                    }}
-                    drag="y"
-                    dragConstraints={{ top: 0, bottom: 0 }}
-                    onDragEnd={(event, info) => {
-                        // If the drag offset exceeds the threshold, trigger the appropriate pagination
-                        if (info.offset.y < -dragThreshold) {
-                            paginate(1);
-                        } else if (info.offset.y > dragThreshold) {
-                            paginate(-1);
-                        }
-                    }}
-                    className="absolute w-full h-full"
-                >
-                    <Post post={postsData[index]} />
-                </motion.div>
-            </AnimatePresence>
+        <div className="relative">
+            {/*
+        3) Use the custom --vh variable to set the container's height
+        scroll-smooth + snap-y + snap-mandatory for that IG Reels feel
+      */}
+            <div
+                className="overflow-y-scroll snap-y snap-mandatory scroll-smooth"
+                style={{
+                    height: 'calc(var(--vh, 1vh) * 100)',
+                }}
+            >
+                {postsData.map((post) => (
+                    <div key={post.id} className="snap-start h-full">
+                        <Post post={post} onCommentClick={handleCommentClick} />
+                    </div>
+                ))}
+            </div>
+
+            {/* Comments Drawer */}
+            <CommentsDrawer
+                isOpen={commentsDrawerOpen}
+                comments={selectedPost ? selectedPost.comments : []}
+                onClose={handleCloseDrawer}
+            />
         </div>
     );
 };

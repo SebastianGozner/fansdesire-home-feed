@@ -7,8 +7,9 @@ import { FaHeart, FaComment, FaDonate, FaBookmark } from 'react-icons/fa';
  * Reusable ActionButton Component
  * Wraps an icon with Framer Motion hover and tap animations.
  */
-const ActionButton = ({ children }) => (
+const ActionButton = ({ children, onClick }) => (
     <motion.button
+        onClick={onClick}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         className="p-2"
@@ -19,19 +20,15 @@ const ActionButton = ({ children }) => (
 
 /**
  * Post Component
- * Renders a single post with its image, user info, and action buttons.
+ * Renders a full-screen post with a background image,
+ * bottom-left user info, and bottom-right icon buttons.
  *
- * Props:
- * - post: Object containing post details:
- *   - mainImage: URL of the post's main image
- *   - avatar: URL of the user's avatar
- *   - username: The user's name
- *   - description: A short description of the post
- *   - date: The date of the post
+ * The bottom elements are positioned with an inline style that moves them up by
+ * `calc(1rem + env(safe-area-inset-bottom))` to avoid being covered by the device's UI.
  */
-const Post = ({ post }) => {
+const Post = ({ post, onCommentClick }) => {
     return (
-        <div className="relative w-full h-screen">
+        <div className="relative w-full h-full">
             {/* Main Post Image */}
             <img
                 src={post.mainImage}
@@ -40,7 +37,10 @@ const Post = ({ post }) => {
             />
 
             {/* Bottom Left: User Info */}
-            <div className="absolute bottom-4 left-4 text-white">
+            <div
+                className="absolute left-4 text-white"
+                style={{ bottom: "calc(1rem + env(safe-area-inset-bottom))" }}
+            >
                 <div className="flex items-center mb-2">
                     <img
                         src={post.avatar}
@@ -54,11 +54,14 @@ const Post = ({ post }) => {
             </div>
 
             {/* Bottom Right: Action Buttons */}
-            <div className="absolute bottom-4 right-4 flex flex-col space-y-4">
+            <div
+                className="absolute right-4 flex flex-col space-y-4"
+                style={{ bottom: "calc(1rem + env(safe-area-inset-bottom))" }}
+            >
                 <ActionButton>
                     <FaHeart size={24} color="white" />
                 </ActionButton>
-                <ActionButton>
+                <ActionButton onClick={() => onCommentClick(post)}>
                     <FaComment size={24} color="white" />
                 </ActionButton>
                 <ActionButton>

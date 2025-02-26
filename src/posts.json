@@ -5,7 +5,19 @@
     "avatar": "avatar.jpg",
     "username": "Priya Patel",
     "description": "Exploring the beautiful nature!",
-    "date": "2023-02-21"
+    "date": "2023-02-21",
+    "comments": [
+      {
+        "id": 1,
+        "username": "Alice",
+        "text": "Stunning view!"
+      },
+      {
+        "id": 2,
+        "username": "Bob",
+        "text": "Absolutely beautiful!"
+      }
+    ]
   },
   {
     "id": 2,
@@ -13,7 +25,14 @@
     "avatar": "avatar.jpg",
     "username": "Priya Patel",
     "description": "Urban adventures and cityscapes.",
-    "date": "2023-02-20"
+    "date": "2023-02-20",
+    "comments": [
+      {
+        "id": 1,
+        "username": "Charlie",
+        "text": "Amazing shot!"
+      }
+    ]
   },
   {
     "id": 3,
@@ -21,7 +40,8 @@
     "avatar": "avatar.jpg",
     "username": "Priya Patel",
     "description": "Catching sunsets and good vibes.",
-    "date": "2023-02-19"
+    "date": "2023-02-19",
+    "comments": []
   },
   {
     "id": 4,
@@ -29,7 +49,14 @@
     "avatar": "avatar.jpg",
     "username": "Priya Patel",
     "description": "Life is a beautiful ride.",
-    "date": "2023-02-18"
+    "date": "2023-02-18",
+    "comments": [
+      {
+        "id": 1,
+        "username": "Dave",
+        "text": "So inspiring!"
+      }
+    ]
   },
   {
     "id": 5,
@@ -37,7 +64,8 @@
     "avatar": "avatar.jpg",
     "username": "Priya Patel",
     "description": "Adventure awaits around every corner.",
-    "date": "2023-02-17"
+    "date": "2023-02-17",
+    "comments": []
   },
   {
     "id": 6,
@@ -45,7 +73,21 @@
     "avatar": "avatar.jpg",
     "username": "Priya Patel",
     "description": "Chasing dreams in the city.",
-    "date": "2023-02-16"
+    "date": "2023-02-16",
+    "comments": [
+      {
+        "id": 1,
+        "username": "Eva",
+        "text": "Love the energy here!",
+        "avatar": "/avatar.jpg"
+      },
+      {
+        "id": 2,
+        "username": "Frank",
+        "text": "Keep chasing those dreams!",
+        "avatar": "/avatar2.jpg"
+      }
+    ]
   },
   {
     "id": 7,
@@ -53,7 +95,8 @@
     "avatar": "avatar.jpg",
     "username": "Priya Patel",
     "description": "Serene moments in nature.",
-    "date": "2023-02-15"
+    "date": "2023-02-15",
+    "comments": []
   },
   {
     "id": 8,
@@ -61,7 +104,14 @@
     "avatar": "avatar.jpg",
     "username": "Priya Patel",
     "description": "Capturing the essence of urban life.",
-    "date": "2023-02-14"
+    "date": "2023-02-14",
+    "comments": [
+      {
+        "id": 1,
+        "username": "Grace",
+        "text": "The colors are amazing!"
+      }
+    ]
   },
   {
     "id": 9,
@@ -69,6 +119,7 @@
     "avatar": "avatar.jpg",
     "username": "Priya Patel",
     "description": "Moments that take your breath away.",
-    "date": "2023-02-13"
+    "date": "2023-02-13",
+    "comments": []
   }
 ]
