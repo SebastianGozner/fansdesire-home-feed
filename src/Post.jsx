@@ -29,6 +29,7 @@ const MediaCarousel = ({ items }) => {
                                 autoPlay
                                 loop
                                 muted
+                                playsInline
                                 className="w-full h-full object-cover"
                             />
                         ) : (
@@ -100,7 +101,7 @@ const Post = ({ post, onCommentClick }) => {
                     />
                     <span className="font-bold">{post.username}</span>
                 </div>
-                <p className="text-lg max-w-[30ch] break-words">
+                <p className="text-lg max-w-[31ch] break-words">
                     {isDescriptionExpanded || !shouldTruncate ? (
                         post.description
                     ) : (
