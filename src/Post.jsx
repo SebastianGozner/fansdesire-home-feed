@@ -30,6 +30,7 @@ const MediaCarousel = ({ items }) => {
                                 loop
                                 muted
                                 playsInline
+                                webkit-playsinline
                                 className="w-full h-full object-cover"
                             />
                         ) : (
