@@ -1,11 +1,24 @@
 [
   {
     "id": 1,
-    "mainImage": "/1.webp",
     "avatar": "avatar.jpg",
     "username": "Priya Patel",
-    "description": "Exploring the beautiful nature!",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
     "date": "2023-02-21",
+    "items": [
+      {
+        "type": "video",
+        "src": "/video.mp4"
+      },
+      {
+        "type": "image",
+        "src": "/1.webp"
+      },
+      {
+        "type": "image",
+        "src": "/5.webp"
+      }
+    ],
     "comments": [
       {
         "id": 1,
@@ -78,7 +91,7 @@
       {
         "id": 1,
         "username": "Eva",
-        "text": "Love the energy here!",
+        "text": "Wow those titties look fake as fuck!",
         "avatar": "/avatar.jpg"
       },
       {
@@ -86,6 +99,18 @@
         "username": "Frank",
         "text": "Keep chasing those dreams!",
         "avatar": "/avatar2.jpg"
+      },
+      {
+        "id": 3,
+        "username": "Bob",
+        "text": "Keep hammering!",
+        "avatar": "/avatar.avif"
+      },
+      {
+        "id": 4,
+        "username": "Martin",
+        "text": "Wow those titties look fake as fuck!",
+        "avatar": "/avatar.avif"
       }
     ]
   },

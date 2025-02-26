@@ -25,7 +25,7 @@ const CommentsDrawer = ({ isOpen, comments, onClose }) => {
                             comments.map((comment) => (
                                 <div
                                     key={comment.id}
-                                    className="flex items-center justify-between border-b pb-2"
+                                    className="flex items-center justify-between pb-2"
                                 >
                                     <div className="flex items-center">
                                         {/* Avatar on the left */}
