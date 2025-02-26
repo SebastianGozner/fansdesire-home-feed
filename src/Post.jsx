@@ -102,7 +102,7 @@ const Post = ({ post, onCommentClick }) => {
                     />
                     <span className="font-bold">{post.username}</span>
                 </div>
-                <p className="text-lg max-w-[31ch] break-words">
+                <p className="text-lg max-w-[33ch] break-words">
                     {isDescriptionExpanded || !shouldTruncate ? (
                         post.description
                     ) : (
