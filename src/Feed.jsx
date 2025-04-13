@@ -1,4 +1,3 @@
-// src/Feed.js
 import React, { useEffect } from 'react';
 import postsData from './posts.json';
 import Post from './Post';

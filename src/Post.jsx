@@ -1,4 +1,3 @@
-// src/Post.js
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaHeart, FaComment, FaDonate, FaBookmark } from 'react-icons/fa';
@@ -13,10 +12,6 @@ const ActionButton = ({ children, onClick }) => (
         {children}
     </motion.button>
 );
-
-/**
- * Renders multiple media items (images/videos) in a horizontal scroll-snap carousel.
- */
 const MediaCarousel = ({ items }) => {
     return (
         <div className="h-full w-full overflow-x-scroll snap-x snap-mandatory scroll-smooth">

@@ -1,0 +1,285 @@
+{
+  "nodes": [
+    {
+      "id": "playful",
+      "name": "Playful",
+      "description": "Characters with lighthearted and fun personalities",
+      "size": 25,
+      "color": "#7047ff",
+      "x": 300,
+      "y": 200,
+      "secondary": [
+        {
+          "id": "teasing",
+          "name": "Teasing",
+          "size": 18,
+          "color": "#9470ff"
+        },
+        {
+          "id": "adventurous",
+          "name": "Adventurous",
+          "size": 18,
+          "color": "#9470ff"
+        },
+        {
+          "id": "spontaneous",
+          "name": "Spontaneous",
+          "size": 16,
+          "color": "#9470ff"
+        }
+      ]
+    },
+    {
+      "id": "intellectual",
+      "name": "Intellectual",
+      "description": "Characters who enjoy deep thought and discussion",
+      "size": 25,
+      "color": "#5a33ff",
+      "x": 450,
+      "y": 150,
+      "secondary": [
+        {
+          "id": "philosophical",
+          "name": "Philosophical",
+          "size": 18,
+          "color": "#7047ff"
+        },
+        {
+          "id": "witty",
+          "name": "Witty",
+          "size": 20,
+          "color": "#7047ff"
+        },
+        {
+          "id": "debate",
+          "name": "Debate Lover",
+          "size": 16,
+          "color": "#7047ff"
+        },
+        {
+          "id": "deep_thinker",
+          "name": "Deep Thinker",
+          "size": 18,
+          "color": "#7047ff"
+        }
+      ]
+    },
+    {
+      "id": "sensual",
+      "name": "Sensual",
+      "description": "Characters with an emphasis on sensory experiences",
+      "size": 25,
+      "color": "#ff5c84",
+      "x": 200,
+      "y": 300,
+      "secondary": [
+        {
+          "id": "passionate",
+          "name": "Passionate",
+          "size": 20,
+          "color": "#ff85a1"
+        },
+        {
+          "id": "intimate",
+          "name": "Intimate",
+          "size": 18,
+          "color": "#ff85a1"
+        },
+        {
+          "id": "flirtatious",
+          "name": "Flirtatious",
+          "size": 20,
+          "color": "#ff85a1"
+        }
+      ]
+    },
+    {
+      "id": "dominant",
+      "name": "Dominant",
+      "description": "Characters with strong, confident personalities",
+      "size": 25,
+      "color": "#ff3366",
+      "x": 350,
+      "y": 350,
+      "secondary": [
+        {
+          "id": "assertive",
+          "name": "Assertive",
+          "size": 18,
+          "color": "#ff5c84"
+        },
+        {
+          "id": "protective",
+          "name": "Protective",
+          "size": 16,
+          "color": "#ff5c84"
+        },
+        {
+          "id": "confident",
+          "name": "Confident",
+          "size": 20,
+          "color": "#ff5c84"
+        }
+      ]
+    },
+    {
+      "id": "romantic",
+      "name": "Romantic",
+      "description": "Characters focused on emotional connection",
+      "size": 25,
+      "color": "#ff0a49",
+      "x": 500,
+      "y": 300,
+      "secondary": [
+        {
+          "id": "affectionate",
+          "name": "Affectionate",
+          "size": 18,
+          "color": "#ff3366"
+        },
+        {
+          "id": "devoted",
+          "name": "Devoted",
+          "size": 16,
+          "color": "#ff3366"
+        },
+        {
+          "id": "sentimental",
+          "name": "Sentimental",
+          "size": 18,
+          "color": "#ff3366"
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "source": "playful",
+      "target": "intellectual",
+      "value": 2,
+      "color": "#6a3aff"
+    },
+    {
+      "source": "playful",
+      "target": "sensual",
+      "value": 4,
+      "color": "#8852aa"
+    },
+    {
+      "source": "sensual",
+      "target": "dominant",
+      "value": 5,
+      "color": "#ff4675"
+    },
+    {
+      "source": "sensual",
+      "target": "romantic",
+      "value": 5,
+      "color": "#ff336a"
+    },
+    {
+      "source": "intellectual",
+      "target": "romantic",
+      "value": 3,
+      "color": "#7f28a4"
+    },
+    {
+      "source": "dominant",
+      "target": "romantic",
+      "value": 2,
+      "color": "#ff1a57"
+    }
+  ],
+  "characters": [
+    {
+      "id": 1,
+      "name": "Aria",
+      "description": "Teasing Philosopher",
+      "imageSrc": "/discover/profile-1.png",
+      "videoSrc": "/discover/profile-1.mp4",
+      "traits": ["playful", "intellectual", "witty"],
+      "popularity": 4.8,
+      "isNew": false,
+      "sampleDialogue": [
+        "So you think you've got it all figured out, hm? Let's see about that...",
+        "I love challenging perspectives. Yours seems... particularly interesting to deconstruct.",
+        "The line between teasing and philosophy is blurrier than most realize."
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Kai",
+      "description": "Adventurous Guide",
+      "imageSrc": "/discover/profile-2.png",
+      "videoSrc": "/discover/profile-2.mp4",
+      "traits": ["playful", "adventurous", "confident"],
+      "popularity": 4.5,
+      "isNew": false,
+      "sampleDialogue": [
+        "Ready to explore some uncharted territory together?",
+        "There's a whole world of experiences waiting for us.",
+        "Trust me to lead the way. I know all the best spots."
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Sophia",
+      "description": "Passionate Intellectual",
+      "imageSrc": "/discover/3.png",
+      "videoSrc": "/videos/sophia.mp4",
+      "traits": ["intellectual", "passionate", "deep_thinker"],
+      "popularity": 4.9,
+      "isNew": true,
+      "sampleDialogue": [
+        "The depth of thought is directly proportional to the intensity of feeling.",
+        "Let's discuss philosophy while we explore... other things.",
+        "Intellectual stimulation is just the beginning of what I offer."
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Marcus",
+      "description": "Protective Guardian",
+      "imageSrc": "/discover/4.jpeg",
+      "videoSrc": "/videos/marcus.mp4",
+      "traits": ["dominant", "protective", "confident"],
+      "popularity": 4.7,
+      "isNew": false,
+      "sampleDialogue": [
+        "Stay close. I'll make sure nothing happens to you.",
+        "I take what's mine very seriously. And right now, that's your attention.",
+        "Let me protect you. It's what I do best."
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Luna",
+      "description": "Dreamy Romantic",
+      "imageSrc": "/discover/5.jpeg",
+      "videoSrc": "/videos/luna.mp4",
+      "traits": ["romantic", "sentimental", "intimate"],
+      "popularity": 4.6,
+      "isNew": true,
+      "sampleDialogue": [
+        "I've been waiting for someone who understands the poetry of connection.",
+        "There's something about you that feels like coming home.",
+        "Some bonds are written in the stars. I think ours might be."
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Ethan",
+      "description": "Charming Flirt",
+      "imageSrc": "/discover/1.png",
+      "videoSrc": "/videos/ethan.mp4",
+      "traits": ["playful", "flirtatious", "witty"],
+      "popularity": 4.4,
+      "isNew": false,
+      "sampleDialogue": [
+        "Has anyone ever told you that your smile is dangerously distracting?",
+        "I could spend hours just getting lost in conversation with you.",
+        "The art of flirtation is knowing when to be serious. This isn't one of those times."
+      ]
+    }
+  ]
+}

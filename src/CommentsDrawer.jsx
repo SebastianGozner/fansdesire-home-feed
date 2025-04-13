@@ -1,4 +1,3 @@
-// src/CommentsDrawer.js
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaHeart } from 'react-icons/fa';

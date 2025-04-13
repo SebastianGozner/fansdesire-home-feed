@@ -1,14 +1,12 @@
 // src/App.js
 import React from 'react';
-import Header from './Header';
-import Feed from './Feed';
+import DiscoveryPage from "./components/discover/DiscoveryPage";
 
 function App() {
   return (
-      <div className="relative">
-        <Header />
-        <Feed />
-      </div>
+    <>
+        <DiscoveryPage />
+    </>
   );
 }
 

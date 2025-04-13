@@ -1,3 +1,65 @@
+/* src/index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Custom gradient text */
+.gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-secondary-400;
+}
+
+/* Node styles */
+.node-primary {
+    @apply cursor-pointer transition-all duration-300 ease-in-out;
+    filter: drop-shadow(0 0 6px rgba(112, 71, 255, 0.7));
+}
+
+.node-primary:hover {
+    filter: drop-shadow(0 0 12px rgba(112, 71, 255, 1));
+}
+
+.node-secondary {
+    @apply transition-all duration-300 ease-in-out;
+    filter: drop-shadow(0 0 4px rgba(255, 92, 132, 0.5));
+}
+
+.node-link {
+    @apply transition-all duration-500 ease-in-out;
+}
+
+/* Character card video hover effect */
+.character-card {
+    @apply relative overflow-hidden rounded-lg transition-all duration-300;
+}
+
+.character-card-image {
+    @apply w-full h-full object-cover transition-opacity duration-300;
+}
+
+.character-card-video {
+    @apply absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-300;
+}
+
+.character-card:hover .character-card-image {
+    @apply opacity-0;
+}
+
+.character-card:hover .character-card-video {
+    @apply opacity-100;
+}
+
+/* Card content gradient overlay */
+.card-content-overlay {
+    @apply absolute bottom-0 left-0 right-0 px-4 py-3 bg-gradient-to-t from-dark-800 to-transparent;
+}
