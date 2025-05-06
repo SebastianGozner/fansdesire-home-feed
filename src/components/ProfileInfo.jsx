@@ -9,7 +9,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 // Mock data remains structurally the same
 const mockProfileData = {
     1: { /* Rebecca Green data */
-        name: 'Rebecca Green', images: ['/profile/avatar.jpg', '/2.webp','/3.webp',], bio: 'Active Yoga and fitness coach, healthy and concerned about others.', details: {'Age': '51', 'Body': 'Athletic', 'Language': 'English', 'Relationship': 'N/A', 'Occupation': 'Yoga & Fitness Coach', 'Hobbies': 'Yoga, Fitness, Nature', 'Personality': 'Energetic and joyful',},
+        name: 'Rebecca Green', images: ['/profile/avatar.jpg', '/4.webp','/8.webp',], bio: 'Active Yoga and fitness coach, healthy and concerned about others.', details: {'Age': '51', 'Body': 'Athletic', 'Language': 'English', 'Relationship': 'N/A', 'Occupation': 'Yoga & Fitness Coach', 'Hobbies': 'Yoga, Fitness, Nature', 'Personality': 'Energetic and joyful',},
     },
     2: { /* John Doe data */
         name: 'John Doe', images: [`https://ui-avatars.com/api/?name=John+Doe&background=ffcc00&color=1f1f1f&size=256`], bio: 'Software developer focused on frontend technologies.', details: {'Age': '35', 'Body': 'Average', 'Language': 'English, Spanish', 'Relationship': 'Single', 'Occupation': 'Developer', 'Hobbies': 'Coding, Hiking', 'Personality': 'Analytical, Quiet', 'Location': 'New York',}
